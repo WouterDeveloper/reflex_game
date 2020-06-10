@@ -1,0 +1,21 @@
+$breakpoints: (
+    sm: $breakpoint-sm,
+    md: $breakpoint-md,
+    lg: $breakpoint-lg,
+    xl: $breakpoint-xl,
+    xxl: $breakpoint-xxl,
+    xxzl: $breakpoint-xxxl
+) !default;
+    
+@mixin breakpoint(
+    $breakpoint,
+    $breakpoint-direction: min
+) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media screen and (#{$breakpoint-direction}-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}
+
+

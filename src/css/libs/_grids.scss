@@ -1,0 +1,32 @@
+// Container
+.container {
+    position: relative;
+    max-width: calc(1480px - (#{$gutter*2}));
+    width: calc(100% - (#{$gutter*3}));
+    padding: 0 $gutter;
+    margin: auto;
+    @media all and (max-width: $breakpoint-xxl) {
+        max-width: calc(1140px - (#{$gutter*2}));
+        width: calc(100% - (#{$gutter*3}));
+    }
+    @media all and (max-width: $breakpoint-md) {
+        padding: 0;
+    }
+}
+
+// Css grid
+.grid {
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: ($gutter*2);
+    grid-row-gap: ($gutter*4);
+    grid-template-rows: auto;
+    display: grid;
+        @media all and (max-width: $breakpoint-lg) {
+            grid-row-gap: ($gutter*2);
+            grid-column-gap: $gutter;
+        }
+}
+
+
+
+
