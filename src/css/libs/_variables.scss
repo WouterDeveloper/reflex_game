@@ -1,20 +1,19 @@
 // Colors
-$bg-color-primary:                  #ffffff; 
-$bg-color-secondary:                #f3f3f3;
-$content-color-highlight-primary:   #FF005C;
-$content-color-highlight-secondary: #73BE44;
-$content-color-highlight-tertiary:  #FDD400;
+$bg-color-primary:                 #c4e1ea; 
+$content-color-primary:            #ffffff;
+$content-color-secondary:          #c50b09;
+$content-color-tertiary:           #9e0102;
+$content-color-highlight-primary:  #ff0000;
 
 // Fonts
-$font-primary:                     'Poppins', sans-serif;
-$font-secondary:                   'Open Sans', sans-serif; 
-$font-color-primary:              #393939;
+$font-primary:                      'Open Sans', sans-serif; 
+$font-color-primary:              #2a383c;
 $font-color-secondary:            #ffffff;
 $font-lineheight:                   1.56rem;
-$font-weight-normal:                400;
-$font-weight-medium:                600;
+$font-weight-light:                 300;
+$font-weight-regular:               400;
+$font-weight-semi-bold:             600;
 $font-weight-bold:                  700;
-$font-weight-extrabold:             400;
 
 // Spacings
 $spacing-xs:                        8px;

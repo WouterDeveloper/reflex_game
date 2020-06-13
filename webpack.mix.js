@@ -18,7 +18,7 @@ mix.setPublicPath('htdocs/dist/');
 mix.setResourceRoot('/dist/');
 
 mix.js('src/js/app.js', 'js');
-mix.sass('src/css/app.scss', 'css');
+mix.sass('src/css/main.scss', 'css');
 
 // Full API
 // mix.js(src, output);

@@ -1,0 +1,18 @@
+@mixin mm($modifier) {
+    $len: str-length(#{&}); /* Get parent string length */
+    $parent: str-slice(#{&}, 2, $len); /* Remove leading . */
+
+    @at-root [class^="#{$parent}"][class*="--#{$modifier}"] {
+        @extend .#{$parent};
+        @content;
+    }
+}
+
+// How to use example
+// object--round--red
+// @include mm(round){
+//     border-radius:100%;
+// }
+// @include mm(red){
+//     background-color:red%;
+// }
