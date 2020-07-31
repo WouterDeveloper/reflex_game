@@ -29,32 +29,21 @@ function gameOver(){
 
 }
 
-character[0].onclick = function() {
-  randomPosition(character);
-  addScore();
-};
+// character[0].onclick = function() {
+//   randomPosition(character);
+//   addScore();
+// };
 
 body.onclick = function() {
   gameOver();
+  console.log("Je bent af");
 };
 
-document.getElementsByClassName('character')[0]
-.addEventListener('click', function (event) {
-  console.log('hoi');
-});
-
-document.addEventListener('click', function (event) {
-  console.log(event.target.closest);
-  console.log('body');
-});
-
-
-// character.addEventListener("click", function(event){
-//   if (!(event.target).closest(character).length) {
-//     // ... clicked on the 'body', but not inside of #menutop
-//     console.log("je bent af");
-//   }
-// }); 
+character[0].addEventListener('click', function(){
+  event.stopImmediatePropagation();
+  randomPosition(character);
+  addScore();
+})
 
 window.onload = function() {
     randomPosition(character);
