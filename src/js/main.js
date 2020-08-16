@@ -5,7 +5,7 @@ let background = document.getElementById("app");
 let body = document.getElementsByTagName('body')[0];
 let score = 0;
 
-function randomPosition(character) {
+function spawnCharacterAtRandomPosition(character) {
   let randomNumberY = Math.round(Math.random() * document.body.clientHeight);
   let randomNumberX = Math.round(Math.random() * document.body.clientWidth);
   let characterHeight = character[0].clientHeight;
@@ -14,6 +14,11 @@ function randomPosition(character) {
   let randomLeft = randomNumberX - characterWidth;
   character[0].style.top = (randomTop + "px");
   character[0].style.left = (randomLeft + "px");
+}
+
+function deleteCharacter() {
+  var character = document.getElementsByClassName("character");
+  character.remove();
 }
 
 function showScore(){
@@ -41,10 +46,10 @@ body.onclick = function() {
 
 character[0].addEventListener('click', function(){
   event.stopImmediatePropagation();
-  randomPosition(character);
+  deleteCharacter(character);
   addScore();
 })
 
 window.onload = function() {
-    randomPosition(character);
+  spawnCharacterAtRandomPosition(character);
 }
