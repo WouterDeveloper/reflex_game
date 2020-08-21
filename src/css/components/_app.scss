@@ -1,11 +1,35 @@
-#score{
-    position:absolute;
-    top:0;
-    left:0;
-    width:10%;
-    height:10%;
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 5%;
 
-    &__text{
+    &__score{
+        display: flex;
+        // position:absolute;
+        // top:0;
+        // left:0;
+        // width:10%;
+        // height:10%;
+        align-self:center;
+        justify-content: center;
+    
+        &__text{
+    
+        }
+    }
 
+    &__time{
+        // position:absolute;
+        // top:0;
+        // left:0;
+        // width:10%;
+        // height:10%;
+        align-self:center;
+        justify-content: center;
+    
+        &__text{
+    
+        }
     }
 }
+
